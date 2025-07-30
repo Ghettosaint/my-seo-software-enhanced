@@ -26,7 +26,7 @@ from datetime import datetime, timedelta
 import os
 import asyncio
 
-from .seo_analyzer import analyze_url
+from seo_analyzer import analyze_url
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', 'change-this-secret')
