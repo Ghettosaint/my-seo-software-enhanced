@@ -17,11 +17,11 @@ import asyncio
 import logging
 from typing import Dict, Any
 
-from .content_analyzer import fetch_content
-from .keyword_utils import extract_keywords
-from .readability_utils import compute_readability
-from .performance_utils import analyze_performance
-from .ai_search_optimizer import analyze_ai_search_factors
+from content_analyzer import fetch_content
+from keyword_utils import extract_keywords
+from readability_utils import compute_readability
+from performance_utils import analyze_performance
+from ai_search_optimizer import analyze_ai_search_factors
 
 # Configure a basic logger.  In deployment logging is typically
 # configured by the hosting platform but this ensures debug output is
