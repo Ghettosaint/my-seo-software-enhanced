@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: seo-analyzer
+    env: python
+    plan: free
+    buildCommand: |
+      pip install --no-cache-dir -r requirements.txt
+    startCommand: |
+      gunicorn app:app --bind 0.0.0.0:$PORT
+    region: oregon
+    envVars:
+      - key: SECRET_KEY
+        value: replace-me-with-a-random-secret
