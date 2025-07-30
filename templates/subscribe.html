@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe to SEO Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f8fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #0070ba;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Subscribe</h1>
+        <p>Your free trial has ended. To continue using the SEO Analyzer please subscribe.</p>
+        <p>The subscription costs <strong>$20 per month</strong> after a <strong>1‑day free trial</strong>.</p>
+        <p>Payments are processed by PayPal.</p>
+        <!--
+          The following PayPal subscription link initiates a subscription with a
+          one‑day free trial followed by recurring monthly payments.  Replace
+          ``deyan_georgiev@mail.bg`` with the correct PayPal business email if
+          needed.  In production this should be replaced with a PayPal
+          subscription button or the JavaScript SDK.
+        -->
+        <a class="button" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick-subscriptions&business=deyan_georgiev@mail.bg&item_name=SEO+Analyzer+Subscription&currency_code=USD&a1=0.00&p1=1&t1=D&a3=20.00&p3=1&t3=M&src=1&sr1=1&return=https://example.com/payment_success">Subscribe via PayPal</a>
+        <p style="margin-top:1rem; font-size: 0.9rem; color: #666;">After completing your payment, return here to unlock the app.</p>
+        <p><a href="{{ url_for('payment_success') }}" class="button" style="background-color:#28a745;">I've already subscribed</a></p>
+    </div>
+</body>
+</html>
